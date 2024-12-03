@@ -1,0 +1,18 @@
+.imagenGaleria{
+    cursor: pointer;
+    max-height: 200px;
+}
+
+#imagenElegida img {
+    max-width: 90%;
+    border: 2px solid #000;
+}
+
+.header{
+    background-color: blue;
+    text-align: center;
+}
+
+.footer{
+    text-align: center;
+}

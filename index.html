@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Recuperación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body>
+    <header class="header">
+      <h1>Ejercicio de Recuperación</h1>
+    </header>
+    <main class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <!--Formulario mediante el cual se definen los campos que el usuario podra introducir, incluyendo el tipo de 
+          dato que este debera introducir en cada uno de los campos para que el registro sea exitoso-->
+          <h2>Formulario</h2>
+          <form id="formulario">
+            <div>
+              <label>Email</label>
+              <input type="email" id="email" class="form-control" placeholder="Introduzca el email que desee:" required>
+            </div>
+            <br>
+            <div>
+              <label>Nombre</label>
+              <input type="text" id="nombre" class="form-control" placeholder="Introduzca el nombre que desee:" required>
+            </div>
+            <br>
+            <div>
+              <!--Encuesta en la que el usuario podra elegir una de las opciones que se le proporcionan para el horario y la opcion
+              de que pueda recibir notificaciones-->
+              <label class="form-label">Seleccione su preferencia</label>
+              <div>
+                <input type="radio" id="manana" name="horario" value="Horario de mañana">
+                <label for="manana">Horario de mañana</label>
+              </div>
+              <div>
+                <input type="radio" id="tarde" name="horario" value="Horario de tarde">
+                <label for="tarde">Horario de tarde</label>
+              </div>
+              <div>
+                <input type="radio" id="nocturno" name="horario" value="Nocturno" disabled>
+                <label for="nocturno">Nocturno (no disponible)</label>
+              </div>
+            </div>
+            <div>
+              <input type="checkbox" id="notificaciones">
+              <label for="notificaciones">Enviar notificaciones</label>
+            </div>
+            <br>
+            <!--Boton para guardar los valores introducidos anteriormente por el usuario-->
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+          <br>
+          <!--Tabla en la cual se mostraran los valores guardados anteriormente-->
+          <h2>Tabla de datos</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Email</th>
+                <th>Nombre</th>
+                <th>Opción</th>
+                <th>Notificaciones</th>
+              </tr>
+            </thead>
+            <tbody id="tablaDatos">
+            </tbody>
+          </table>
+        </div>
+        <!--Imagenes con las que el usuario podra interactuar-->
+        <div class="col-lg-6">
+          <h2>Galería</h2>
+          <div id="galeria" class="row">
+            <div class="col-lg-4">
+              <img src="imagenes/imagen1.jpg" class="imagenGaleria">
+            </div>
+            <div class="col-lg-4">
+              <img src="imagenes/imagen2.jpg" class="imagenGaleria">
+            </div>
+            <div class="col-lg-4">
+              <img src="imagenes/imagen3.jpg" class="imagenGaleria">
+            </div>
+            <div class="col-lg-4">
+              <img src="imagenes/imagen4.jpg" class="imagenGaleria">
+            </div>
+            <div class="col-lg-4">
+              <img src="imagenes/imagen5.jpg" class="imagenGaleria">
+            </div>
+            <div class="col-lg-4">
+              <img src="imagenes/imagen6.jpg" class="imagenGaleria">
+            </div>
+          </div>
+          <div id="imagenElegida" class="text-center d-none">
+            <img id="imagenActual" src="" alt="Elegida" class="img-fluid">
+            <button id="inicioGaleria" class="btn btn-primary">Volver</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <br>
+    <footer class="footer">
+       <p>Rubén Pacho García</p> 
+    </footer>
+  </body>
+  <script src="javascript/main.js" type="module"></script>
+</html>
